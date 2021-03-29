@@ -1,0 +1,38 @@
+$colors: (
+    'secondary-color': rgba(33, 150, 243, 1),
+
+    'main-color': rgba(33, 33, 33, 1),
+    'backdrop-bg-col': rgba(0, 0, 0, 0.2),
+
+    'rare-color': rgba(117, 117, 117, 1),
+    'textarea-back-col':rgba(117, 117, 117, 0.5),
+    'whitey-color': rgba(255, 255, 255, 1),
+
+    'hero-bg-color': rgba(47, 48, 58, 1),
+    'team-bg-color': rgba(245, 244, 250, 1),
+
+    'clients-icon__color': #afb1b8,
+    'card-info__col':#eeeeee,
+    'border-header__col': #ececec,
+
+    'third-bg-color': #2f303a,
+    'primary-text-color': #212121,
+
+    'network-bg-color': rgba(255, 255, 255, 0.1),
+    'mailing-input__col':rgba(255, 255, 255, 0.3),
+    'mailing-whitey':rgba(255, 255, 255, 0.6),
+
+    'product-bg-color': rgba(47, 48, 58, 0.8),
+
+    'techno-bg-color': rgba(33, 150, 243, 0.9),
+
+    'cubic-main': cubic-bezier(0.4, 0, 0.2, 1),
+
+    'border-form-col':#2196f3,
+    'label-form-col':#188ce8,
+
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

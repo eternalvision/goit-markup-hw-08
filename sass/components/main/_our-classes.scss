@@ -1,0 +1,63 @@
+.classes {
+    padding-bottom: 94px;
+}
+
+.classes-title {
+    color: getColor('main-color');
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 50px;
+}
+
+.classes-img {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.product-actions {
+    bottom: 0;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    width: 100%;
+
+    position: absolute;
+
+    color: getColor('whitey-color');
+    background-color: getColor('product-bg-color');
+
+    width: 370px;
+    height: 70px;
+}
+
+.product-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+
+    line-height: 16px;
+
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.team-links:hover,
+.team-links:focus,
+.team-links__personal:hover,
+.team-links__personal:focus {
+    color: getColor('whitey-color');
+    background-color: getColor('secondary-color');
+}

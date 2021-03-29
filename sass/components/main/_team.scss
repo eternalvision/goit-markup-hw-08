@@ -1,0 +1,91 @@
+.team {
+    background-color: getColor('team-bg-color');
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team-best__member {
+    display: flex;
+}
+
+.team-block {
+    background-color: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    border-radius: 0px 0px 4px 4px;
+
+    width: 270px;
+    height: 428px;
+}
+
+.team-cards {
+    padding: 30px 32px;
+}
+
+.team-member {
+    font-size: 16px;
+    font-weight: 500;
+
+    text-align: center;
+
+    letter-spacing: 0.03em;
+
+    padding-bottom: 10px;
+}
+
+.team-profession {
+    color: getColor('rare-color');
+
+    font-size: 16px;
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+}
+
+.team-links__category {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.team-links__personal {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: color 250ms getColor('cubic-main'),
+        background-color 250ms getColor('cubic-main');
+}
+
+.team-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    width: 44px;
+    height: 44px;
+
+    color: getColor('clients-icon__color');
+
+    transition: color 250ms getColor('cubic-main'),
+        background-color 250ms getColor('cubic-main');
+}
+
+.team-icon {
+    fill: currentColor;
+}

@@ -1,0 +1,46 @@
+.contacts {
+    margin-left: auto;
+}
+
+.contacts-header {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-links__ico {
+    display: inline-block;
+    fill: currentColor;
+    margin-right: 10px;
+    background-size: contain;
+}
+
+.contacts,
+.contacts-header {
+    color: getColor('rare-color');
+
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+
+    transition: color 250ms getColor('cubic-main');
+}
+
+.contacts,
+.contacts-header:hover {
+    color: getColor('secondary-color');
+    text-decoration: none;
+}
+
+.contacts,
+.contacts-header:focus,
+.links-mail:hover {
+    color: getColor('secondary-color');
+    text-decoration: none;
+}

@@ -1,0 +1,46 @@
+.under-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients {
+    white-space: normal;
+    justify-content: space-between;
+    display: flex;
+}
+
+.clients-border {
+    width: 170px;
+    height: 90px;
+}
+
+.clients-ico {
+    fill: currentColor;
+}
+
+
+.clients-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid getColor('clients-icon__color');
+    border-radius: 4px;
+
+    color: getColor('clients-icon__color');
+
+    transition: color 250ms getColor('cubic-main'),
+    border-color 250ms getColor('cubic-main');
+}
+
+.clients-links:hover,
+.clients-links:focus {
+    border-color: getColor('secondary-color');
+    border-radius: 4px;
+
+    color: getColor('secondary-color');
+}
