@@ -1,11 +1,10 @@
 // container-center
 @mixin container() {
+        width: 1200px;
         padding-left: 15px;
         padding-right: 15px;
-        margin: 0 auto;
-        max-width: 480px;
-        min-width: 320px;
-  }
-
+        margin-left: auto;
+        margin-right: auto;
+}
 // 
 // 

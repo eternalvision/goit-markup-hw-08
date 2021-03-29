@@ -2,27 +2,31 @@
 @import './variables/utils';
 @import './variables/mixins';
 // 
-// HEADER
-@import './components/header/head' ;
+// ADAPTIVE
+// @import './mobile/mobile';
+// MENU
+@import './components/mobile-menu/mobile-menu';
+// // HEADER
+@import './components/header/head';
 @import './components/header/contacts';
-// 
+// // 
 // MAIN
-@import './components/main/hero';
-@import './components/main/under-hero';
-@import './components/main/our-classes';
-@import './components/main/team';
-@import './components/main/clients';
-// 
-// FOOTER
-@import './components/footer/footer';
-// 
-// BACKDROP
-@import './components/backdrop/backdrop';
-@import './components/backdrop/form';
-// 
-//PORTFOLIO
-@import './components/portfolio-window/buttons';
-@import './components/portfolio-window/portfollio-main';
+// @import './components/main/hero';
+// @import './components/main/under-hero';
+// @import './components/main/our-classes';
+// @import './components/main/team';
+// @import './components/main/clients';
+// // 
+// // FOOTER
+// @import './components/footer/footer';
+// // 
+// // BACKDROP
+// @import './components/backdrop/backdrop';
+// @import './components/backdrop/form';
+// // 
+// //PORTFOLIO
+// @import './components/portfolio-window/buttons';
+// @import './components/portfolio-window/portfollio-main';
 
 
 
@@ -31,41 +35,19 @@ body {
     font-family: Roboto, sans-serif;
     font-style: normal;
 }
+
 img {
     display: block;
 }
 
-
-
 .container {
-@include container();
+    @include container();
 }
 
-.header-navigation__links {
-    padding-top: 35px;
-}
-
-.header,
-.header-navigation__links{
-    display: flex;
-}
-
-.header-navigation__menu:not(:first-child),
-.contacts-links:not(:first-child) {
-    margin-left: 50px;
-}
 
 .header-links__menu:hover,
 .header-links__menu:focus {
     color: getColor('secondary-color');
-}
-
-.hero-manusript li:not(:last-child) {
-    margin-right: 30px;
-}
-
-.team-block:not(:last-child) {
-    margin-right: 30px;
 }
 
 .classes-title__team {

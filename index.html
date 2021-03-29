@@ -13,71 +13,63 @@
     </head>
     <body>
         <!-- Шапка сайта -->
-        <header class="header">
-            <div class="header-container">
-                <nav class="header-navigation">
-                    <a href="./index.html" class="header-navigation__logo">
-                        <span class="web">Web</span>Studio
-                    </a>
-                    <ul class="header-navigation__links">
-                        <!-- Студия -->
-                        <li class="header-navigation__menu">
+        <header class="page-header">
+            <div class="container container--nav">
+                <nav class="nav">
+                    <a class="logo logo--header" href="./index.html">
+                        <span class="logo__text">Web</span>Studio</a
+                    >
+                    <ul class="nav__list">
+                        <li class="nav__item">
                             <a
-                                class="header-links__menu active"
+                                class="nav__link nav__link--active"
                                 href="./index.html"
+                                >Студия</a
                             >
-                                Студия
-                            </a>
                         </li>
-                        <!-- Портфолио -->
-                        <li class="header-navigation__menu">
-                            <a
-                                class="header-links__menu"
-                                href="./portfolio.html"
+                        <li class="nav__item">
+                            <a class="nav__link" href="./portfolio.html"
                                 >Портфолио</a
                             >
                         </li>
-                        <!-- Команда -->
-                        <li class="header-navigation__menu">
-                            <a class="header-links__menu" href="#">Команда</a>
+                        <li class="nav__item">
+                            <a class="nav__link" href="">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <!--  -->
-                <!-- Контакты -->
-                <ul class="contacts">
-                    <!-- Mail-ico -->
-                    <li class="contacts-links">
+
+                <ul class="contacts__list">
+                    <li class="contacts__item">
                         <a
-                            class="contacts-header"
+                            class="contacts__link"
                             href="mailto:info@devstudio.com"
                         >
-                            <svg
-                                class="contacts-links__ico"
-                                width="16"
-                                height="16"
-                            >
+                            <svg class="contacts__icon" width="16" height="12">
                                 <use href="./images/sprite.svg#icon-mail"></use>
                             </svg>
-                            info@devstudio.com
-                        </a>
+                            info@devstudio.com</a
+                        >
                     </li>
-                    <!-- Smartphone-ico -->
-                    <li class="contacts-links">
-                        <a class="contacts-header" href="tel:+380961111111">
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="tel:+380961111111">
                             <svg
-                                class="contacts-links__ico"
-                                width="16"
+                                class="contacts__icon smartphone"
+                                width="10"
                                 height="16"
                             >
                                 <use
                                     href="./images/sprite.svg#icon-smartphone"
                                 ></use>
                             </svg>
-                            +38 096-111-11-11
-                        </a>
+                            +38 096 111 11 11</a
+                        >
                     </li>
                 </ul>
+                <button type="button" class="menu__button js-open-menu">
+                    <svg width="40px" height="40px">
+                        <use href="./images/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
             </div>
         </header>
         <!--  -->
@@ -804,7 +796,78 @@
             </div>
         </div>
         <!--  -->
+        <!--MOBILE MENU-->
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
+            <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                    <a
+                        href="./index.html"
+                        class="mobile-nav__link mobile-nav__link--active"
+                    >
+                        Студия</a
+                    >
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="./portfolio.html" class="mobile-nav__link">
+                        Портфолио</a
+                    >
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__link">Контакты</a>
+                </li>
+            </ul>
+
+            <address>
+                <ul class="mobile-contacts">
+                    <li class="mobile-contacts__item">
+                        <a
+                            href="tel:+380961111111"
+                            class="mobile-contacts__link mobile-contacts__link--cell"
+                        >
+                            +38 096 111 11 11</a
+                        >
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a
+                            href="mailto:info@devstudio.com"
+                            class="mobile-contacts__link mobile-contacts__link--mail"
+                        >
+                            info@devstudio.com</a
+                        >
+                    </li>
+                </ul>
+
+                <ul class="mobile-networks">
+                    <li class="mobile-networks__item">
+                        <a href="#" class="mobile-networks__link">Instagram</a>
+                    </li>
+                    <li class="mobile-networks__item">
+                        <a href="#" class="mobile-networks__link">Twitter</a>
+                    </li>
+                    <li class="mobile-networks__item">
+                        <a href="#" class="mobile-networks__link">Facebook</a>
+                    </li>
+                    <li class="mobile-networks__item">
+                        <a href="#" class="mobile-networks__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </address>
+            <button
+                type="button"
+                class="menu__button menu__button--close js-close-menu"
+            >
+                <svg class="icon-close--mobile" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-mobile-close"></use>
+                </svg>
+            </button>
+        </div>
         <!-- JS -->
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
         <script>
             // MODAL
             (() => {
@@ -831,6 +894,39 @@
                         new FormData(e.currentTarget).forEach((value, name) =>
                             console.log(`${name}: ${value}`),
                         );
+                    });
+            })();
+            // MOBILE MENU
+            (() => {
+                const mobileMenu = document.querySelector('.js-menu-container');
+                const openMenuBtn = document.querySelector('.js-open-menu');
+                const closeMenuBtn = document.querySelector('.js-close-menu');
+
+                const toggleMenu = () => {
+                    const isMenuOpen =
+                        openMenuBtn.getAttribute('aria-expanded') === 'true' ||
+                        false;
+                    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+                    mobileMenu.classList.toggle('is-open');
+
+                    const scrollLockMethod = !isMenuOpen
+                        ? 'disableBodyScroll'
+                        : 'enableBodyScroll';
+                    bodyScrollLock[scrollLockMethod](document.body);
+                };
+
+                openMenuBtn.addEventListener('click', toggleMenu);
+                closeMenuBtn.addEventListener('click', toggleMenu);
+
+                // Закрываем мобильное меню на более широких экранах
+                // в случае изменения ориентации устройства.
+                window
+                    .matchMedia('(min-width: 768px)')
+                    .addEventListener('change', e => {
+                        if (!e.matches) return;
+                        mobileMenu.classList.remove('is-open');
+                        openMenuBtn.setAttribute('aria-expanded', false);
+                        bodyScrollLock.enableBodyScroll(document.body);
                     });
             })();
         </script>

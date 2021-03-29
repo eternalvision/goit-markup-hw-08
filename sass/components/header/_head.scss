@@ -1,63 +1,80 @@
-.header {
-    border: 1px solid getColor('border-header__col');
+// /* Навигация сайта */
+
+.nav__list {
+    @extend %list;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 88px;
+
+        @media screen and (min-width: $desktop) {
+            margin-left: 93px;
+        }
+    }
 }
 
-.header-container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+.nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.header-navigation__logo {
-    font-size: 26px;
-    font-family: Raleway, sans-serif;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    margin-right: 93px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    color: getColor('main-color');
+.nav__item:not(:first-child) {
+    margin-left: 50px;
 }
 
-.header-navigation,
-.contacts {
-    display: flex;
-}
+.nav__link {
+    color: $primary-text-color;
 
-.web {
-    color: getColor('secondary-color');
-}
-
-.header-links__menu {
-    text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    color: getColor('main-color');
-    box-sizing: border-box;
-    padding-top: 7px;
-    padding-bottom: 30px;
-    transition: color 250ms getColor('cubic-main');
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color 250ms $bazier;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
 }
 
-.header-links__menu.active {
-    color: getColor('secondary-color');
+.nav__link--active {
+    color: $accent-color;
     position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        margin-top: 28px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
+// 
+// 
+.page-header {
+    border-bottom: 1px solid #ececec;
 }
 
-.header-links__menu.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    display: block;
-    height: 4px;
-    margin-top: 28px;
-    width: 100%;
-    background-color: getColor('secondary-color');
-    border-radius: 2px;
+.container--nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

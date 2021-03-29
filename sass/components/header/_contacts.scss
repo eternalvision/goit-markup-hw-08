@@ -1,46 +1,91 @@
-.contacts {
-    margin-left: auto;
+/* Контакты в хедере */
+
+.contacts__list {
+    @extend %list;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
-.contacts-header {
-    padding-top: 7px;
-    padding-bottom: 7px;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
+.contacts__item:last-child {
+    @media screen and (max-width: 1199px) {
+        margin-top: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 30px;
+    }
 }
 
-.contacts-links__ico {
-    display: inline-block;
-    fill: currentColor;
-    margin-right: 10px;
-    background-size: contain;
-}
-
-.contacts,
-.contacts-header {
-    color: getColor('rare-color');
-
-    text-decoration: none;
+.contacts__link {
+    color: $secondary-text-color;
 
     font-weight: 500;
-    font-size: 14px;
-
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
-    line-height: 1.1;
 
-    transition: color 250ms getColor('cubic-main');
+    display: flex;
+    align-items: center;
+    transition: color 250ms var(--bazier);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
 
-.contacts,
-.contacts-header:hover {
-    color: getColor('secondary-color');
-    text-decoration: none;
+.contacts__icon {
+    margin-right: 8px;
+    text-align: center;
+    fill: currentColor;
 }
 
-.contacts,
-.contacts-header:focus,
-.links-mail:hover {
-    color: getColor('secondary-color');
-    text-decoration: none;
+.logo {
+    display: inline-block;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
+    &--header {
+        color: $black-logo;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &--footer {
+        color: $white-color;
+    }
+}
+
+.logo__text {
+    color: $accent-color;
 }
