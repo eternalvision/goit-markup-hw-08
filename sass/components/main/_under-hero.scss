@@ -1,14 +1,44 @@
 .hero-under {
-    box-sizing: border-box;
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .hero-manusript {
-    display: flex;
-    letter-spacing: 0.03em;
-}
+  @extend %list;
 
+  @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+  }
+}
+.hero-item{
+      &:not(:first-child) {
+          @media screen and(max-width: 767px) {
+              margin-top: 30px;
+          }
+      }
+
+      @media screen and(min-width: $tablet) {
+          margin: 15px;
+          flex-basis: calc((100% - 30px * 2) / 2);
+      }
+
+      @media screen and(min-width: $desktop) {
+          margin: 15px;
+          flex-basis: calc((100% - 30px * 4) / 4);
+      }
+}
+.hero__thumb{
+      background-color: $secondary-bg-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding-top: 25px;
+      padding-bottom: 25px;
+}
 .hero-links__ico {
     padding: 25px 100px;
     width: 270px;
@@ -18,17 +48,29 @@
 }
 
 .hero-title__criteria {
-    color: getColor('main-color');
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 1.1;
-    font-size: 14px;
-    padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+      text-align: center;
+  }
 }
 
 .hero-info {
-    color: getColor('rare-color');
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.7;
+  color: $secondary-text-color;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  margin: 0;
+  padding: 0;
 }

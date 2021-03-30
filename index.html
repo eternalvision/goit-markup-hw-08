@@ -12,6 +12,7 @@
         <title>Студия</title>
     </head>
     <body>
+        <!--  -->
         <!-- Шапка сайта -->
         <header class="page-header">
             <div class="container container--nav">
@@ -80,7 +81,7 @@
             <section class="hero">
                 <div class="container">
                     <h1 class="hero-title">
-                        Эффективные ршения <br />
+                        Эффективные рeшения <br />
                         для вашего бизнеса
                     </h1>
 
@@ -95,12 +96,20 @@
                 <div class="container">
                     <ul class="hero-manusript">
                         <!-- Внимание к деталям -->
-                        <li>
-                            <svg class="hero-links__ico" width="16" height="16">
-                                <use
-                                    href="./images/sprite.svg#icon-antenna"
-                                ></use>
-                            </svg>
+                        <li class="hero__item">
+                            <!--  -->
+                            <div class="hero__thumb">
+                                <svg
+                                    class="hero-links__ico"
+                                    width="16"
+                                    height="16"
+                                >
+                                    <use
+                                        href="./images/sprite.svg#icon-antenna"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <!--  -->
                             <h4 class="hero-title__criteria">
                                 Внимание к деталям
                             </h4>
@@ -110,12 +119,20 @@
                             </p>
                         </li>
                         <!-- Пунктуальность -->
-                        <li>
-                            <svg class="hero-links__ico" width="16" height="16">
-                                <use
-                                    href="./images/sprite.svg#icon-clock"
-                                ></use>
-                            </svg>
+                        <li class="hero__item">
+                            <!--  -->
+                            <div class="hero__thumb">
+                                <svg
+                                    class="hero-links__ico"
+                                    width="16"
+                                    height="16"
+                                >
+                                    <use
+                                        href="./images/sprite.svg#icon-clock"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <!--  -->
                             <h4 class="hero-title__criteria">Пунктуальность</h4>
                             <p class="hero-info">
                                 Задача организации, в особенности же рамки и
@@ -123,12 +140,20 @@
                             </p>
                         </li>
                         <!-- Планирование -->
-                        <li>
-                            <svg class="hero-links__ico" width="16" height="16">
-                                <use
-                                    href="./images/sprite.svg#icon-diagram"
-                                ></use>
-                            </svg>
+                        <li class="hero__item">
+                            <!--  -->
+                            <div class="hero__thumb">
+                                <svg
+                                    class="hero-links__ico"
+                                    width="16"
+                                    height="16"
+                                >
+                                    <use
+                                        href="./images/sprite.svg#icon-diagram"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <!--  -->
                             <h4 class="hero-title__criteria">Планирование</h4>
                             <p class="hero-info">
                                 Равным образом консультация с широким активом в
@@ -136,12 +161,20 @@
                             </p>
                         </li>
                         <!-- Современные технологии -->
-                        <li>
-                            <svg class="hero-links__ico" width="16" height="16">
-                                <use
-                                    href="./images/sprite.svg#icon-astronaut"
-                                ></use>
-                            </svg>
+                        <li class="hero__item">
+                            <!--  -->
+                            <div class="hero__thumb">
+                                <svg
+                                    class="hero-links__ico"
+                                    width="16"
+                                    height="16"
+                                >
+                                    <use
+                                        href="./images/sprite.svg#icon-astronaut"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <!--  -->
                             <h4 class="hero-title__criteria">
                                 Современные технологии
                             </h4>
@@ -159,35 +192,56 @@
                 <div class="container">
                     <h2 class="classes-title">Чем мы занимаемся</h2>
                     <ul class="classes-img">
-                        <li>
-                            <img
-                                src="./images/1block/1.jpg"
-                                alt="excellent layout"
-                                width="370"
-                            />
-                            <h3 class="product-actions product-title">
-                                ДЕСКСТОПНЫЕ ПРИЛОЖЕНИЯ
-                            </h3>
+                        <li class="classes-item">
+                            <div class="classes-thumb">
+                                <img
+                                    class="no-gap"
+                                    srcset="
+                                        ./images/1block/1.jpg      1x,
+                                        ./images/1block/(1)1x2.jpg 2x
+                                    "
+                                    src="./images/1block/1.jpg"
+                                    alt="Планшет с клавиатурой"
+                                    width="370"
+                                />
+                                <h3 class="product-actions">
+                                    ДЕСКСТОПНЫЕ ПРИЛОЖЕНИЯ
+                                </h3>
+                            </div>
                         </li>
-                        <li>
-                            <img
-                                src="./images/1block/2.jpg"
-                                alt="interface style"
-                                width="370"
-                            />
-                            <h3 class="product-actions product-title">
-                                МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ
-                            </h3>
+                        <li class="classes-item">
+                            <div class="classes-thumb">
+                                <img
+                                    class="no-gap"
+                                    srcset="
+                                        ./images/1block/2.jpg      1x,
+                                        ./images/1block/(2)2x2.jpg 2x
+                                    "
+                                    src="./images/1block/2.jpg"
+                                    alt="Планшет с клавиатурой"
+                                    width="370"
+                                />
+                                <h3 class="product-actions">
+                                    МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ
+                                </h3>
+                            </div>
                         </li>
-                        <li>
-                            <img
-                                src="./images/1block/3.jpg"
-                                alt="correct scale"
-                                width="370"
-                            />
-                            <h3 class="product-actions product-title">
-                                ДИЗАЙНЕРСКИЕ РЕШЕНИЯ
-                            </h3>
+                        <li class="classes-item">
+                            <div class="classes-thumb">
+                                <img
+                                    class="no-gap"
+                                    srcset="
+                                        ./images/1block/3.jpg      1x,
+                                        ./images/1block/(3)3x2.jpg 2x
+                                    "
+                                    src="./images/1block/3.jpg"
+                                    alt="Планшет с клавиатурой"
+                                    width="370"
+                                />
+                                <h3 class="product-actions">
+                                    ДИЗАЙНЕРСКИЕ РЕШЕНИЯ
+                                </h3>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -202,9 +256,13 @@
                         <!--  -->
                         <li class="team-block">
                             <img
-                                src="./images/group/1.jpg"
-                                alt="Product Designer"
-                                width="270"
+                                class="no-gap team__photo"
+                                srcset="
+                                    ./images/group/Ihor.jpg   1x,
+                                    ./images/group/Ihor2x.jpg 2x
+                                "
+                                src="./images/group/Ihor.jpg"
+                                alt="Фото Игоря"
                             />
 
                             <div class="team-cards">
@@ -274,9 +332,13 @@
                         <!--  -->
                         <li class="team-block">
                             <img
-                                src="./images/group/2.jpg"
-                                alt="Product Designer"
-                                width="270"
+                                class="no-gap team__photo"
+                                srcset="
+                                    ./images/group/Mihail.jpg   1x,
+                                    ./images/group/Mihail2x.jpg 2x
+                                "
+                                src="./images/group/Mihail.jpg"
+                                alt="Фото Игоря"
                             />
                             <div class="team-cards">
                                 <h3 class="team-member">Игорь Демьяненко</h3>
@@ -345,9 +407,13 @@
                         <!--  -->
                         <li class="team-block">
                             <img
-                                src="./images/group/3.jpg"
-                                alt="Product Designer"
-                                width="270"
+                                class="no-gap team__photo"
+                                srcset="
+                                    ./images/group/Nikolay.jpg   1x,
+                                    ./images/group/Nikolay2x.jpg 2x
+                                "
+                                src="./images/group/Nikolay.jpg"
+                                alt="Фото Игоря"
                             />
                             <div class="team-cards">
                                 <h3 class="team-member">Игорь Демьяненко</h3>
@@ -416,9 +482,13 @@
                         <!--  -->
                         <li class="team-block">
                             <img
-                                src="./images/group/4.jpg"
-                                alt="Product Designer"
-                                width="270"
+                                class="no-gap team__photo"
+                                srcset="
+                                    ./images/group/Olga.jpg   1x,
+                                    ./images/group/Olga2x.jpg 2x
+                                "
+                                src="./images/group/Olga.jpg"
+                                alt="Фото Игоря"
                             />
 
                             <div class="team-cards">
@@ -580,20 +650,26 @@
             <div class="container-footer">
                 <div class="container-footer__links">
                     <!-- Logo -->
-                    <a href="./index.html" class="container-footer__logo">
-                        <span class="web">Web</span>Studio
+                    <a
+                        href="./index.html"
+                        class="container-footer__logo logo__footer"
+                    >
+                        <span class="web logo__text">Web</span
+                        ><span class="logo-whitey">Studio</span>
                     </a>
                     <!--  -->
                     <address class="address">
                         <!--  -->
                         <ul>
                             <li class="address-list">
-                                <a
-                                    class="address-location footer-links"
-                                    href="#"
-                                >
-                                    г. Киев, пр-т Леси Украинки, 26
-                                </a>
+                                <span class="address-text">
+                                    <a
+                                        class="address-location footer-links"
+                                        href="#"
+                                    >
+                                        г. Киев, пр-т Леси Украинки, 26
+                                    </a>
+                                </span>
                             </li>
                         </ul>
                         <!--  -->
@@ -620,7 +696,7 @@
 
                 <div class="footer-social__links">
                     <p class="footer-social__title">Присоединяйтесь</p>
-                    <ul class="footer-right__list">
+                    <ul class="footer-right__list footer-list__network">
                         <!--  -->
                         <li class="footer-team__links">
                             <a href="#" class="footer-links__social">

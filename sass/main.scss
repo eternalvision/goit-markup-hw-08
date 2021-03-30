@@ -3,7 +3,6 @@
 @import './variables/mixins';
 // 
 // ADAPTIVE
-// @import './mobile/mobile';
 // MENU
 @import './components/mobile-menu/mobile-menu';
 // // HEADER
@@ -11,18 +10,18 @@
 @import './components/header/contacts';
 // // 
 // MAIN
-// @import './components/main/hero';
-// @import './components/main/under-hero';
-// @import './components/main/our-classes';
-// @import './components/main/team';
-// @import './components/main/clients';
+@import './components/main/hero';
+@import './components/main/under-hero';
+@import './components/main/our-classes';
+@import './components/main/team';
+@import './components/main/clients';
 // // 
 // // FOOTER
-// @import './components/footer/footer';
+@import './components/footer/footer';
 // // 
 // // BACKDROP
-// @import './components/backdrop/backdrop';
-// @import './components/backdrop/form';
+@import './components/backdrop/backdrop';
+@import './components/backdrop/form';
 // // 
 // //PORTFOLIO
 // @import './components/portfolio-window/buttons';
@@ -38,24 +37,20 @@ body {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
     @include container();
 }
 
+// .container--mobile{
+//     @include container--mobile();
+// }
+
 
 .header-links__menu:hover,
 .header-links__menu:focus {
     color: getColor('secondary-color');
-}
-
-.classes-title__team {
-    color: getColor('main-color');
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-    padding-bottom: 50px;
 }
