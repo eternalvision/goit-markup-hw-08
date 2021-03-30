@@ -1,3 +1,4 @@
+/* BACKDROP */
 .backdrop {
     position: fixed;
     top: 0;
@@ -17,77 +18,4 @@
         pointer-events: none;
         visibility: hidden;
     }
-}
-
-.modal {
-    padding: 40px;
-    position: relative;
-    max-width: 450px;
-
-    @media screen and (min-width: 450px) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        overflow: auto;
-        padding: 40px;
-
-        max-width: 450px;
-        width: 100%;
-
-        max-height: 100vh;
-    }
-
-    @media screen and (min-width: $desktop) {
-        max-width: 528px;
-    }
-
-    background-color: $white-color;
-    transition: transform 250ms $bazier;
-
-    .backdrop.is-hidden & {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-}
-
-@media screen and (min-width: 450px) {
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    overflow: auto;
-    padding: 40px;
-    max-width: 450px;
-    width: 100%;
-    max-height: 100vh;
-}
-    }
-
-.backdrop.is-hidden.modal {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.button-modal {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    border: 1px solid getColor('backdrop-bg-col');
-    background-color: getColor('whitey-color');
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: background-color 250ms getColor('cubic-main');
-}
-
-.button-modal:hover,
-.button-modal:focus {
-    background-color: getColor('secondary-color');
-    cursor: pointer;
 }

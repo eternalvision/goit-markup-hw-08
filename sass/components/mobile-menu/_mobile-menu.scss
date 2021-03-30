@@ -1,0 +1,144 @@
+.mobile-menu,
+.menu__button {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: $white-color;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translate(100%);
+    transition: transform 250ms $bazier;
+
+    &.is-open {
+      transform: translate(0%);
+    }
+  }
+
+  .mobile-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav__item:not(:first-child) {
+    margin-top: 32px;
+  }
+
+  .mobile-nav__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+
+    &--active {
+      color: $accent-color;
+    }
+  }
+
+  .mobile-contacts {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 64px;
+  }
+
+  .mobile-contacts__item:not(:first-child) {
+    margin-top: 32px;
+  }
+
+  .mobile-contacts__link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    &--cell {
+      color: $accent-color;
+      font-size: 34px;
+      line-height: 1.17;
+    }
+
+    &--mail {
+      color: $secondary-text-color;
+      font-size: 24px;
+      line-height: 1.16;
+    }
+  }
+
+  .mobile-networks {
+    font-style: inherit;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .mobile-networks__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      &::after {
+        content: '';
+        width: 0px;
+        height: 22px;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .mobile-networks__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+  }
+
+  .menu__button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+
+    &--close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      transition: color 250ms $bazier;
+    }
+
+    &--close:hover,
+    &--close:focus {
+      color: $accent-color;
+    }
+  }
+
+  .icon-close--mobile {
+    fill: currentColor;
+  }
+}
+

@@ -1,167 +1,208 @@
-.form-title {
-  margin: 0;
-  padding: 0;
+.callback-form {
+    margin-top: 12px;
+}
 
-  font-weight: 700;
-  font-size: 20px;
+.callback-form__label {
+    display: block;
 
-  line-height: 1.5;
-  text-align: center;
-}
-.form-mailing {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.form-input input,
-textarea {
-    border: 1px solid getColor('main-color');
-    transition: border-color 250ms getColor('cubic-main');
-    border-radius: 4px;
-    width: 448px;
-    height: 40px;
-}
-.form-input input:focus,
-textarea:focus {
-    border-color: getColor('border-form-col');
-    outline: none;
-}
-// 
-// 
-.backdrop-label {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.16;
     letter-spacing: 0.01em;
-    color: getColor('rare-color');
-    display: inline-block;
-    padding-bottom: 4px;
-    padding-top: 10px;
+    color: $secondary-text-color;
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
 }
-.backdrop-label:focus+.contact-icon {
-    fill: getColor('label-form-col');
-}
-// 
-// 
-.about-me-back {
+
+.callback-form__wraper {
     position: relative;
+}
+
+.callback-form__input {
+    margin-top: 4px;
     padding: 11px 42px;
     width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms $bazier;
+
+    &:focus-within {
+        border-color: $accent-color;
+        outline: none;
+    }
 }
-.about-me-back:focus+.contact-icon {
-    fill: getColor('secondary-color');
+
+.callback-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: $primary-text-color;
+    transition: fill 250ms $bazier;
+
+    .callback-form__input:focus-within+& {
+        fill: $accent-color;
+    }
 }
-.chekbox-input:checked~.contact-icon {
-    fill: getColor('label-form-col');
-}
-// 
-// 
-.textarea-form textarea {
-    width: 448px;
-    height: 120px;
-    resize: none;
-}
-.textarea-backdrop {
+
+.callback-form__input--feedback {
     padding: 12px 16px;
+    resize: none;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+    }
 }
-.textarea-backdrop::-moz-placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: getColor('textarea-back-col');
+
+.submit-button {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+
+    color: $white-color;
+    background-color: $accent-color;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms $bazier;
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
 }
-// 
-// 
-.backdrop-checkbox {
-    padding-top: 20px;
+
+.checkbox {
+    margin-top: 20px;
 }
-.checkbox-label {
+
+.checkbox__link {
+    color: $accent-color;
+    text-decoration: underline;
+}
+
+.checkbox__label {
     position: relative;
-    display: flex;
+
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
-.chekbox-input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-.checkbox-text {
-    margin-left: 7px;
-    font-size: 14px;
-    line-height: 1.71;
-}
-.checkbox-link {
-    color: getColor('secondary-color');
-    text-decoration: underline;
-}
-.contact-icon {
-    left: 0;
-    margin-left: 52px;
-    margin-top: 15px;
-    /* border: 1px solid black; */
-    position: absolute;
-    fill: getColor('primary-text-color');
-    transition: fill 250ms getColor('cubic-main');
+
+.checkbox__input {
+    opacity: 0;
 }
 
-.check-icon,
-.uncheck-icon {
+.checkbox__icon {
     position: absolute;
     top: 50%;
     left: 0px;
+
     transform: translateY(-50%);
-    transition: opacity 250ms getColor('cubic-main');
-    margin-left: 9px;
+
+    transition: opacity 250ms $bazier;
+
+    &--check {
+        opacity: 0;
+    }
 }
-.check-icon {
-    opacity: 0;
-    transition: fill 250ms getColor('cubic-main');
-    fill: getColor('primary-text-color');
-}
-.chekbox-input:checked~.check-icon {
+
+.checkbox__input:checked~.checkbox__icon--check {
     opacity: 1;
 }
-.chekbox-input:checked~.uncheck-icon {
+
+.checkbox__input:checked~.checkbox__icon--uncheck {
     opacity: 0;
 }
-.chekbox-input:checked~.contact-icon {
-    fill: getColor('label-form-col');
+
+.checkbox__text {
+    margin-left: 7px;
+
+    color: $secondary-text-color;
+
+    font-size: 12px;
+    line-height: 1.16;
 }
-// 
-// 
-.backdrop-button {
-    width: 200px;
-    height: 50px;
-    background-color: getColor('border-form-col');
-    transform: background-color 250ms getColor('cubic-main');
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: 0;
-    border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 30px;
-    display: block;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    color: getColor('whitey-color');
+
+.modal {
+    padding: 40px;
+    position: relative;
+    max-width: 450px;
+
+    @media screen and (min-width: 450px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: auto;
+        padding: 40px;
+
+        max-width: 450px;
+        width: 100%;
+
+        max-height: 100vh;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 528px;
+    }
+
+    background-color: $white-color;
+    transition: transform 250ms $bazier;
+
+    .backdrop.is-hidden & {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
-.backdrop-button:hover,
-.backdrop-button:focus {
-    background-color: getColor('label-form-col');
-    cursor: pointer;
+
+.modal__text {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 20px;
+
+    line-height: 1.5;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    background: $white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: color 250ms $bazier;
+    color: #000000;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        outline: none;
+    }
+}
+
+.close-button__icon {
+    fill: currentColor;
 }

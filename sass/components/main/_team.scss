@@ -77,6 +77,7 @@
 
 }
 
+
 .team-links__category {
   @extend %list;
 
@@ -92,11 +93,15 @@
   }
 }
 
-.team-links__personal {
+.team-links__personal{
+border-radius:50%;
+transition: background-color 250ms getColor('cubic-main');
+
   &:not(:first-child) {
       margin-left: 10px;
   }
 }
+
 
 .team-links {
   display: flex;
@@ -107,24 +112,21 @@
   width: 44px;
   height: 44px;
 
-  &--grey {
-      color: #afb1b8;
-      transition: color 250ms $bazier, background-color 250ms $bazier;
-  }
+  color: #afb1b8;
 
-  &--white {
-      color: $white-color;
-      background-color: $network-bg-color;
-  }
+  // &--grey {
+  //     color: #afb1b8;
+  //     transition: color 250ms $bazier, background-color 250ms $bazier;
+  // }
 
-  &:hover,
-  &:focus {
-      background-color: $accent-color;
-      color: $white-color;
-      outline: none;
+  // &--white {
+  //     color: $white-color;
+  //     background-color: $network-bg-color;
+  // }
   }
-}
 
 .team-icon {
-    fill: currentColor;
+fill: currentColor;
+width: 100%;
 }
+
